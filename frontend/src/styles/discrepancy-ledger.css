@@ -1,0 +1,898 @@
+.ledger-page {
+  padding-top: 24px;
+}
+
+.ledger-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.ledger-heading > div > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #757684;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.ledger-heading h1 {
+  margin-bottom: 5px;
+  color: #191c1e;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.ledger-heading p {
+  color: #444653;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.add-medicine-button {
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 5px;
+  background: #00288e;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-medicine-button:hover {
+  background: #1e40af;
+}
+
+/* Metrics */
+
+.ledger-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.ledger-metric {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #c4c5d5;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.ledger-metric-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.ledger-metric-icon.blue {
+  background: #e5efff;
+  color: #00288e;
+}
+
+.ledger-metric-icon.green {
+  background: #e7f6ec;
+  color: #18733c;
+}
+
+.ledger-metric-icon.red {
+  background: #ffebe8;
+  color: #ba1a1a;
+}
+
+.ledger-metric-icon.orange {
+  background: #fff1df;
+  color: #a65100;
+}
+
+.ledger-metric span {
+  display: block;
+  margin-bottom: 3px;
+  color: #757684;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ledger-metric strong {
+  color: #191c1e;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Main Card */
+
+.ledger-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #c4c5d5;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.ledger-toolbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 13px 17px;
+  border-bottom: 1px solid #c4c5d5;
+  background: #f7f9fb;
+}
+
+.ledger-toolbar > div:first-child > span {
+  display: block;
+  margin-bottom: 3px;
+  color: #757684;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.ledger-toolbar h2 {
+  color: #191c1e;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+.ledger-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ledger-search {
+  width: 205px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 9px;
+  border: 1px solid #c4c5d5;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #757684;
+}
+
+.ledger-search input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #191c1e;
+  font-size: 9px;
+}
+
+.ledger-search input::placeholder {
+  color: #9299a5;
+}
+
+.ledger-controls select {
+  height: 32px;
+  padding: 0 27px 0 9px;
+  border: 1px solid #c4c5d5;
+  border-radius: 5px;
+  outline: 0;
+  background: #ffffff;
+  color: #444653;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+/* Table */
+
+.ledger-table-wrapper {
+  overflow-x: auto;
+}
+
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ledger-table th {
+  padding: 11px 16px;
+  border-bottom: 1px solid #c4c5d5;
+  background: #f2f4f6;
+  color: #444653;
+  text-align: left;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.ledger-table th:nth-child(1) {
+  width: 34%;
+}
+
+.ledger-table th:nth-child(2) {
+  width: 28%;
+}
+
+.ledger-table th:nth-child(3) {
+  width: 25%;
+}
+
+.ledger-table th:nth-child(4) {
+  width: 13%;
+}
+
+.ledger-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #e4e7ea;
+  color: #444653;
+  vertical-align: middle;
+}
+
+.ledger-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.medicine-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.medicine-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #edf3fa;
+  color: #315b80;
+}
+
+.medicine-name strong {
+  color: #191c1e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.stock-status {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stock-status > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.stock-status > span i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.stock-status.in-stock > span {
+  color: #18733c;
+}
+
+.stock-status.in-stock > span i {
+  background: #22a05a;
+}
+
+.stock-status.out-of-stock > span {
+  color: #ba1a1a;
+}
+
+.stock-status.out-of-stock > span i {
+  background: #ba1a1a;
+}
+
+.stock-status small {
+  color: #757684;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.expiry-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expiry-cell strong {
+  color: #444653;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.expiry-cell small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.expiry-cell.soon small {
+  color: #a65100;
+}
+
+.expiry-cell.expired small {
+  color: #ba1a1a;
+}
+
+.ledger-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ledger-actions button {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #596273;
+  cursor: pointer;
+}
+
+.ledger-actions button:hover {
+  background: #edf0f3;
+  color: #00288e;
+}
+
+.ledger-actions button:last-child:hover {
+  color: #ba1a1a;
+}
+
+.ledger-footer {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #f7f9fb;
+  color: #757684;
+  font-size: 9px;
+}
+
+/* Empty */
+
+.ledger-empty {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  color: #9299a5;
+}
+
+.ledger-empty strong {
+  color: #444653;
+  font-size: 12px;
+}
+
+.ledger-empty span {
+  font-size: 9px;
+}
+
+/* Modal */
+
+.medicine-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.42);
+}
+
+.medicine-modal {
+  width: min(480px, 100%);
+  overflow: hidden;
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.2);
+}
+
+.medicine-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e0e3e5;
+  background: #f7f9fb;
+}
+
+.medicine-modal-header span {
+  display: block;
+  margin-bottom: 4px;
+  color: #757684;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.medicine-modal-header h2 {
+  color: #191c1e;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.medicine-modal-header > button {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #596273;
+  cursor: pointer;
+}
+
+.medicine-modal-header > button:hover {
+  background: #e9ecef;
+}
+
+.medicine-modal form {
+  padding: 20px;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field > label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444653;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.form-field > input {
+  width: 100%;
+  height: 39px;
+  padding: 0 10px;
+  border: 1px solid #b9c0ca;
+  border-radius: 5px;
+  outline: 0;
+  background: #ffffff;
+  color: #191c1e;
+  font-size: 10px;
+}
+
+.form-field > input:focus {
+  border-color: #00288e;
+  box-shadow: 0 0 0 2px rgba(0, 40, 142, 0.08);
+}
+
+.form-field > input:disabled {
+  background: #f2f4f6;
+  color: #9299a5;
+}
+
+.stock-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.stock-option {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border: 1px solid #c4c5d5;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #444653;
+  font-size: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stock-option > span {
+  width: 9px;
+  height: 9px;
+  border: 1px solid #9299a5;
+  border-radius: 50%;
+}
+
+.stock-option.active {
+  border-color: #006398;
+  background: #edf7fc;
+  color: #006398;
+}
+
+.stock-option.active > span {
+  border: 3px solid #006398;
+}
+
+.stock-option.active.out {
+  border-color: #ba1a1a;
+  background: #fff3f1;
+  color: #ba1a1a;
+}
+
+.stock-option.active.out > span {
+  border-color: #ba1a1a;
+}
+
+.medicine-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 5px;
+}
+
+.cancel-button,
+.save-medicine-button {
+  height: 36px;
+  padding: 0 13px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancel-button {
+  border: 1px solid #c4c5d5;
+  background: #ffffff;
+  color: #444653;
+}
+
+.save-medicine-button {
+  border: 0;
+  background: #00288e;
+  color: #ffffff;
+}
+
+.save-medicine-button:hover {
+  background: #1e40af;
+}
+
+@media (max-width: 850px) {
+  .ledger-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ledger-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ledger-controls {
+    width: 100%;
+  }
+
+  .ledger-search {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .ledger-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ledger-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .ledger-controls {
+    flex-direction: column;
+  }
+
+  .ledger-search,
+  .ledger-controls select {
+    width: 100%;
+  }
+
+  .stock-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   HORUS DISCREPANCY LEDGER - DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .ledger-page {
+  background: #0f141b;
+  color: #e8edf5;
+}
+
+html[data-theme="dark"] .ledger-heading > div > span {
+  color: #8fa0b5;
+}
+
+html[data-theme="dark"] .ledger-heading h1 {
+  color: #f4f7fb;
+}
+
+html[data-theme="dark"] .ledger-heading p {
+  color: #aeb9c8;
+}
+
+html[data-theme="dark"] .ledger-metric {
+  background: #171d26;
+  border-color: #2b3543;
+}
+
+html[data-theme="dark"] .ledger-metric-icon.blue {
+  background: #202f46;
+  color: #8db8ff;
+}
+
+html[data-theme="dark"] .ledger-metric-icon.green {
+  background: #193526;
+  color: #79d99a;
+}
+
+html[data-theme="dark"] .ledger-metric-icon.red {
+  background: #3b2225;
+  color: #ff7770;
+}
+
+html[data-theme="dark"] .ledger-metric-icon.orange {
+  background: #3b2c1d;
+  color: #f0b56b;
+}
+
+html[data-theme="dark"] .ledger-metric span {
+  color: #9aa8ba;
+}
+
+html[data-theme="dark"] .ledger-metric strong {
+  color: #f3f6fa;
+}
+
+html[data-theme="dark"] .ledger-card {
+  background: #171d26;
+  border-color: #2b3543;
+}
+
+html[data-theme="dark"] .ledger-toolbar {
+  background: #1b2330;
+  border-color: #2b3543;
+}
+
+html[data-theme="dark"] .ledger-toolbar > div:first-child > span {
+  color: #8fa0b5;
+}
+
+html[data-theme="dark"] .ledger-toolbar h2 {
+  color: #f3f6fa;
+}
+
+html[data-theme="dark"] .ledger-search {
+  background: #202936;
+  border-color: #354152;
+  color: #9aa8ba;
+}
+
+html[data-theme="dark"] .ledger-search input {
+  color: #edf2f7;
+}
+
+html[data-theme="dark"] .ledger-search input::placeholder {
+  color: #788697;
+}
+
+html[data-theme="dark"] .ledger-controls select {
+  background: #202936;
+  border-color: #354152;
+  color: #dce4ee;
+}
+
+html[data-theme="dark"] .ledger-table th {
+  background: #1b2330;
+  border-color: #2b3543;
+  color: #91a0b3;
+}
+
+html[data-theme="dark"] .ledger-table td {
+  border-color: #293340;
+  color: #c5ced8;
+}
+
+html[data-theme="dark"] .ledger-table tbody tr:hover {
+  background: #202936;
+}
+
+html[data-theme="dark"] .medicine-icon {
+  background: #26364a;
+  color: #8db8ff;
+}
+
+html[data-theme="dark"] .medicine-name strong {
+  color: #edf2f7;
+}
+
+html[data-theme="dark"] .stock-status.in-stock > span {
+  color: #79d99a;
+}
+
+html[data-theme="dark"] .stock-status.out-of-stock > span {
+  color: #ff7770;
+}
+
+html[data-theme="dark"] .stock-status small {
+  color: #9aa8ba;
+}
+
+html[data-theme="dark"] .expiry-cell strong {
+  color: #dce4ee;
+}
+
+html[data-theme="dark"] .expiry-cell.soon small {
+  color: #f0b56b;
+}
+
+html[data-theme="dark"] .expiry-cell.expired small {
+  color: #ff7770;
+}
+
+html[data-theme="dark"] .ledger-actions button {
+  color: #aeb9c8;
+}
+
+html[data-theme="dark"] .ledger-actions button:hover {
+  background: #293444;
+  color: #8db8ff;
+}
+
+html[data-theme="dark"] .ledger-actions button:last-child:hover {
+  color: #ff7770;
+}
+
+html[data-theme="dark"] .ledger-footer {
+  background: #1b2330;
+  border-color: #2b3543;
+  color: #91a0b3;
+}
+
+html[data-theme="dark"] .ledger-empty {
+  color: #7f8da0;
+}
+
+html[data-theme="dark"] .ledger-empty strong {
+  color: #dce4ee;
+}
+
+
+/* =========================================================
+   ADD / EDIT MEDICINE MODAL
+   ========================================================= */
+
+html[data-theme="dark"] .medicine-modal-overlay {
+  background: rgba(3, 8, 15, 0.72);
+}
+
+html[data-theme="dark"] .medicine-modal {
+  background: #171d26;
+  border: 1px solid #303b4a;
+}
+
+html[data-theme="dark"] .medicine-modal-header {
+  background: #1b2330;
+  border-color: #2b3543;
+}
+
+html[data-theme="dark"] .medicine-modal-header span {
+  color: #91a0b3;
+}
+
+html[data-theme="dark"] .medicine-modal-header h2 {
+  color: #f3f6fa;
+}
+
+html[data-theme="dark"] .medicine-modal-header > button {
+  color: #aeb9c8;
+}
+
+html[data-theme="dark"] .medicine-modal-header > button:hover {
+  background: #293444;
+}
+
+html[data-theme="dark"] .form-field > label {
+  color: #c5ced8;
+}
+
+html[data-theme="dark"] .form-field > input {
+  background: #202936;
+  border-color: #354152;
+  color: #edf2f7;
+}
+
+html[data-theme="dark"] .form-field > input::placeholder {
+  color: #788697;
+}
+
+html[data-theme="dark"] .form-field > input:focus {
+  border-color: #5b9ee4;
+  box-shadow: 0 0 0 2px rgba(91, 158, 228, 0.12);
+}
+
+html[data-theme="dark"] .form-field > input:disabled {
+  background: #181f28;
+  color: #697788;
+}
+
+html[data-theme="dark"] .stock-option {
+  background: #202936;
+  border-color: #354152;
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .stock-option > span {
+  border-color: #697788;
+}
+
+html[data-theme="dark"] .stock-option.active {
+  background: #18394c;
+  border-color: #3189bd;
+  color: #8fd1ff;
+}
+
+html[data-theme="dark"] .stock-option.active.out {
+  background: #3a2225;
+  border-color: #a84444;
+  color: #ff8580;
+}
+
+html[data-theme="dark"] .cancel-button {
+  background: #202936;
+  border-color: #354152;
+  color: #d3dce6;
+}
+
+html[data-theme="dark"] .cancel-button:hover {
+  background: #293444;
+}
+
+html[data-theme="dark"] .save-medicine-button {
+  background: #1858a8;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .save-medicine-button:hover {
+  background: #246bbf;
+}

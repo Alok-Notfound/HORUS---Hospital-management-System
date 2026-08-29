@@ -1,0 +1,569 @@
+.flow-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.flow-page-header > div:first-child > span,
+.flow-card-header span {
+  display: block;
+  margin-bottom: 5px;
+  color: #757684;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.flow-page-header h1 {
+  margin-bottom: 5px;
+  color: #191c1e;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.flow-page-header p {
+  color: #444653;
+  font-size: 12px;
+}
+
+.flow-updated {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.flow-updated > span {
+  color: #757684;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.flow-updated strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #444653;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.flow-updated i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.flow-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.flow-stat-card {
+  padding: 17px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.flow-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.flow-stat-top > span {
+  color: #757684;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.flow-stat-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #eef3f8;
+  color: #315b80;
+}
+
+.flow-stat-card > strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #191c1e;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.flow-stat-change {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #36734d;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.flow-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
+  gap: 16px;
+}
+
+.flow-chart-card,
+.department-card {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.flow-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.flow-card-header h2 {
+  color: #191c1e;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.flow-card-header button {
+  height: 30px;
+  padding: 0 9px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #444653;
+  font-size: 9px;
+}
+
+.flow-chart {
+  display: flex;
+  height: 285px;
+  padding: 20px 18px 8px;
+}
+
+.chart-y-axis {
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  color: #9aa1ad;
+  font-size: 8px;
+  text-align: right;
+}
+
+.chart-area {
+  position: relative;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.chart-grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #edf0f3;
+}
+
+.line-1 {
+  top: 0;
+}
+
+.line-2 {
+  top: 20%;
+}
+
+.line-3 {
+  top: 40%;
+}
+
+.line-4 {
+  top: 60%;
+}
+
+.line-5 {
+  top: 80%;
+}
+
+.flow-bars {
+  position: absolute;
+  inset: 0 0 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 0 8px;
+}
+
+.bar-group {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.bar {
+  width: 13px;
+  min-height: 4px;
+  border-radius: 3px 3px 0 0;
+}
+
+.bar.admissions {
+  background: #2563a8;
+}
+
+.bar.discharges {
+  background: #93a7ba;
+}
+
+.chart-labels {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  color: #9aa1ad;
+  font-size: 8px;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 18px;
+  padding: 0 18px 15px;
+  color: #596273;
+  font-size: 9px;
+}
+
+.chart-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chart-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.legend-admission {
+  background: #2563a8;
+}
+
+.legend-discharge {
+  background: #93a7ba;
+}
+
+.department-list {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding: 19px 18px;
+}
+
+.department-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px 12px;
+}
+
+.department-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.department-info strong {
+  color: #303746;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.department-info span {
+  color: #9299a5;
+  font-size: 9px;
+}
+
+.department-percentage {
+  color: #303746;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.department-progress {
+  grid-column: 1 / -1;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #e8edf2;
+}
+
+.department-progress div {
+  height: 100%;
+  border-radius: inherit;
+  background: #3776a7;
+}
+
+@media (max-width: 950px) {
+  .flow-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flow-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .flow-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .flow-updated {
+    align-items: flex-start;
+  }
+
+  .flow-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   HORUS PATIENT FLOW - DARK MODE
+   ========================================================= */
+
+html[data-theme="dark"] .flow-page {
+  background: #0f141b;
+  color: #e8edf5;
+}
+
+html[data-theme="dark"] .flow-page-header > div:first-child > span,
+html[data-theme="dark"] .flow-card-header span {
+  color: #8fa0b5;
+}
+
+html[data-theme="dark"] .flow-page-header h1 {
+  color: #f4f7fb;
+}
+
+html[data-theme="dark"] .flow-page-header p {
+  color: #aeb9c8;
+}
+
+html[data-theme="dark"] .flow-updated > span {
+  color: #8fa0b5;
+}
+
+html[data-theme="dark"] .flow-updated strong {
+  color: #b3bfce;
+}
+
+html[data-theme="dark"] .flow-stat-card {
+  background: #171d26;
+  border-color: #2b3543;
+}
+
+html[data-theme="dark"] .flow-stat-top > span {
+  color: #9aa8ba;
+}
+
+html[data-theme="dark"] .flow-stat-icon {
+  background: #222b38;
+  color: #8db8ff;
+}
+
+html[data-theme="dark"] .flow-stat-card > strong {
+  color: #f3f6fa;
+}
+
+html[data-theme="dark"] .flow-stat-change {
+  color: #79d99a;
+}
+
+html[data-theme="dark"] .flow-chart-card,
+html[data-theme="dark"] .department-card {
+  background: #171d26;
+  border-color: #2b3543;
+}
+
+html[data-theme="dark"] .flow-card-header {
+  border-color: #2b3543;
+  background: #1b2330;
+}
+
+html[data-theme="dark"] .flow-card-header h2 {
+  color: #f3f6fa;
+}
+
+html[data-theme="dark"] .flow-card-header button {
+  background: #202936;
+  border-color: #354152;
+  color: #d8e0ea;
+}
+
+html[data-theme="dark"] .flow-card-header button:hover {
+  background: #293444;
+}
+
+html[data-theme="dark"] .chart-y-axis {
+  color: #7f8da0;
+}
+
+html[data-theme="dark"] .chart-grid-line {
+  background: #293340;
+}
+
+html[data-theme="dark"] .chart-labels {
+  color: #7f8da0;
+}
+
+html[data-theme="dark"] .chart-legend {
+  color: #9aa8ba;
+}
+
+html[data-theme="dark"] .bar.admissions {
+  background: #3d79bb;
+}
+
+html[data-theme="dark"] .bar.discharges {
+  background: #667d95;
+}
+
+html[data-theme="dark"] .department-info strong {
+  color: #dce4ee;
+}
+
+html[data-theme="dark"] .department-info span {
+  color: #8998aa;
+}
+
+html[data-theme="dark"] .department-percentage {
+  color: #dce4ee;
+}
+
+html[data-theme="dark"] .department-progress {
+  background: #303b4a;
+}
+
+html[data-theme="dark"] .department-progress div {
+  background: #4184b9;
+}
+
+/* =========================================================
+   HORUS PATIENT FLOW — QUICK POLISH
+   ========================================================= */
+
+.flow-page-header {
+  margin-bottom: 20px;
+}
+
+.flow-page-header h1 {
+  letter-spacing: -0.015em;
+}
+
+.flow-stats {
+  gap: 16px;
+}
+
+.flow-stat-card {
+  min-height: 132px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.flow-stat-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(15, 23, 42, 0.07);
+}
+
+.flow-stat-icon {
+  border: 1px solid #e2e8f0;
+}
+
+.flow-chart-card,
+.department-card {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.flow-card-header {
+  min-height: 72px;
+}
+
+.flow-card-header button {
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.flow-card-header button:hover {
+  background: #f4f7fb;
+  border-color: #aeb9c8;
+}
+
+.chart-legend i {
+  flex-shrink: 0;
+}
+
+.department-row {
+  transition: transform 0.15s ease;
+}
+
+.department-row:hover {
+  transform: translateX(1px);
+}
+
+.department-progress {
+  border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 950px) {
+  .flow-page-header {
+    gap: 14px;
+  }
+}
+
+html[data-theme="dark"] .flow-stat-card,
+html[data-theme="dark"] .flow-chart-card,
+html[data-theme="dark"] .department-card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .flow-stat-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+html[data-theme="dark"] .flow-stat-icon {
+  border-color: #354152;
+}
+
+html[data-theme="dark"] .flow-card-header button:hover {
+  background: #293444;
+  border-color: #465466;
+}
+
+html[data-theme="dark"] .department-progress {
+  border-color: #354152;
+}

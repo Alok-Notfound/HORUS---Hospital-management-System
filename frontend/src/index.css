@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f8fa;
+  color: #1f2937;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f7f8fa;
+}
+
+.app-body {
+  min-height: calc(100vh - 76px);
+  display: flex;
+}
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  padding: 28px;
+  overflow-x: hidden;
+}
+
+.dashboard-placeholder {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8b93a1;
+}
+
+.dashboard-placeholder span {
+  margin-bottom: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.dashboard-placeholder h2 {
+  color: #273142;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.dashboard-placeholder p {
+  font-size: 13px;
+}
+
+:root {
+  --horus-bg: #f8fafc;
+  --horus-surface: #ffffff;
+  --horus-surface-soft: #f2f4f6;
+  --horus-border: #c4c5d5;
+  --horus-text: #191c1e;
+  --horus-text-secondary: #444653;
+  --horus-text-muted: #757684;
+  --horus-primary: #00288e;
+}
+
+html[data-theme="dark"] {
+  --horus-bg: #10151c;
+  --horus-surface: #171e27;
+  --horus-surface-soft: #1d2630;
+  --horus-border: #303b47;
+  --horus-text: #edf2f7;
+  --horus-text-secondary: #c3ccd6;
+  --horus-text-muted: #8f9aa7;
+  --horus-primary: #6ea8ff;
+}
+
+html[data-theme="dark"] body {
+  background: var(--horus-bg);
+  color: var(--horus-text);
+}
+
+html[data-theme="dark"] .app-shell,
+html[data-theme="dark"] .dashboard-content {
+  background: var(--horus-bg);
+}
+
+html[data-theme="dark"] .top-header {
+  background: var(--horus-surface);
+  border-color: var(--horus-border);
+}
+
+html[data-theme="dark"] .sidebar {
+  background: var(--horus-surface-soft);
+  border-color: var(--horus-border);
+}
+
+html[data-theme="dark"] .sidebar-title,
+html[data-theme="dark"] .header-name {
+  color: var(--horus-primary);
+}
+
+html[data-theme="dark"] .sidebar-heading p,
+html[data-theme="dark"] .engine-status,
+html[data-theme="dark"] .sidebar-item,
+html[data-theme="dark"] .sidebar-secondary-item,
+html[data-theme="dark"] .administrator,
+html[data-theme="dark"] .header-navigation button,
+html[data-theme="dark"] .header-date {
+  color: var(--horus-text-secondary);
+}
+
+html[data-theme="dark"] .sidebar-item:hover,
+html[data-theme="dark"] .sidebar-secondary-item:hover,
+html[data-theme="dark"] .header-navigation button:hover,
+html[data-theme="dark"] .header-tool:hover {
+  background: #26313d;
+}
+
+html[data-theme="dark"] .sidebar-item.active {
+  background: #315d86;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .sidebar-links,
+html[data-theme="dark"] .administrator {
+  border-color: var(--horus-border);
+}
+
+html[data-theme="dark"] .header-tool {
+  color: var(--horus-primary);
+}
+
+html[data-theme="dark"] .dashboard-content {
+  color: var(--horus-text);
+}
+
+html[data-theme="dark"] .ledger-card,
+html[data-theme="dark"] .ledger-metric,
+html[data-theme="dark"] .profile-card,
+html[data-theme="dark"] .settings-card,
+html[data-theme="dark"] .medicine-modal {
+  background: var(--horus-surface);
+  border-color: var(--horus-border);
+}
+
+html[data-theme="dark"] .ledger-toolbar,
+html[data-theme="dark"] .ledger-table th,
+html[data-theme="dark"] .ledger-footer,
+html[data-theme="dark"] .profile-card-heading,
+html[data-theme="dark"] .settings-card-heading,
+html[data-theme="dark"] .medicine-modal-header {
+  background: var(--horus-surface-soft);
+  border-color: var(--horus-border);
+}
+
+html[data-theme="dark"] .ledger-heading h1,
+html[data-theme="dark"] .ledger-toolbar h2,
+html[data-theme="dark"] .ledger-metric strong,
+html[data-theme="dark"] .medicine-name strong,
+html[data-theme="dark"] .profile-heading h1,
+html[data-theme="dark"] .profile-card-heading h2,
+html[data-theme="dark"] .avatar-details > strong,
+html[data-theme="dark"] .settings-heading h1,
+html[data-theme="dark"] .settings-card-heading h2,
+html[data-theme="dark"] .setting-row strong,
+html[data-theme="dark"] .system-row strong,
+html[data-theme="dark"] .medicine-modal-header h2 {
+  color: var(--horus-text);
+}
+
+html[data-theme="dark"] .ledger-heading p,
+html[data-theme="dark"] .profile-heading p,
+html[data-theme="dark"] .settings-heading p,
+html[data-theme="dark"] .setting-row span,
+html[data-theme="dark"] .system-row span,
+html[data-theme="dark"] .ledger-footer {
+  color: var(--horus-text-secondary);
+}
+
+html[data-theme="dark"] .ledger-table td {
+  border-color: var(--horus-border);
+  color: var(--horus-text-secondary);
+}
+
+html[data-theme="dark"] .ledger-table tbody tr:hover {
+  background: #1d2630;
+}
+
+html[data-theme="dark"] .ledger-search,
+html[data-theme="dark"] .ledger-controls select,
+html[data-theme="dark"] .form-field > input,
+html[data-theme="dark"] .profile-input,
+html[data-theme="dark"] .setting-row select,
+html[data-theme="dark"] .theme-option {
+  background: var(--horus-surface);
+  border-color: var(--horus-border);
+  color: var(--horus-text);
+}
+
+html[data-theme="dark"] .ledger-search input,
+html[data-theme="dark"] .form-field > input,
+html[data-theme="dark"] .profile-input input {
+  color: var(--horus-text);
+}
+
+html[data-theme="dark"] .theme-option.selected {
+  background: #1d3150;
+  border-color: #5c91d4;
+}
+
+html[data-theme="dark"] .security-card {
+  background: #17283d;
+  border-color: #304d70;
+}
+
+html[data-theme="dark"] .profile-avatar {
+  background: #253449;
+  color: #91b8ed;
+}
+
+html[data-theme="dark"] .administrator-avatar {
+  background: #253449;
+  color: #91b8ed;
+}
+
+html[data-theme="dark"] .profile-input:focus-within,
+html[data-theme="dark"] .ledger-search:focus-within {
+  border-color: var(--horus-primary);
+}
+
+/* HORUS dark mode contrast fixes */
+
+html[data-theme="dark"] .sidebar-title,
+html[data-theme="dark"] .header-name {
+  color: #8bbcff;
+}
+
+html[data-theme="dark"] .sidebar-heading p,
+html[data-theme="dark"] .engine-status,
+html[data-theme="dark"] .sidebar-item,
+html[data-theme="dark"] .sidebar-secondary-item,
+html[data-theme="dark"] .administrator,
+html[data-theme="dark"] .header-navigation button,
+html[data-theme="dark"] .header-date {
+  color: #c7d0da;
+}
+
+html[data-theme="dark"] .navigation-label,
+html[data-theme="dark"] .sidebar-heading,
+html[data-theme="dark"] .workspace-kicker,
+html[data-theme="dark"] .workspace-meta span,
+html[data-theme="dark"] .ledger-heading > div > span,
+html[data-theme="dark"] .profile-heading > div:first-child > span,
+html[data-theme="dark"] .settings-heading > div:first-child > span {
+  color: #9ba8b5;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] strong {
+  color: #edf2f7;
+}
+
+html[data-theme="dark"] p {
+  color: #c1cad4;
+}
+
+html[data-theme="dark"] .ledger-table th {
+  color: #b9c4cf;
+}
+
+html[data-theme="dark"] .ledger-table td {
+  color: #c5ced8;
+}
+
+html[data-theme="dark"] .medicine-name strong {
+  color: #edf2f7;
+}
+
+html[data-theme="dark"] .stock-status small {
+  color: #aeb9c5;
+}
+
+html[data-theme="dark"] .expiry-cell strong {
+  color: #d5dde5;
+}
+
+html[data-theme="dark"] .ledger-search {
+  color: #aeb9c5;
+}
+
+html[data-theme="dark"] .ledger-search input::placeholder,
+html[data-theme="dark"] .profile-input input::placeholder {
+  color: #788594;
+}
+
+html[data-theme="dark"] .profile-input,
+html[data-theme="dark"] .form-field > input,
+html[data-theme="dark"] .ledger-controls select,
+html[data-theme="dark"] .setting-row select {
+  color: #edf2f7;
+}
+
+html[data-theme="dark"] .profile-field > label,
+html[data-theme="dark"] .form-field > label {
+  color: #c4ced8;
+}
+
+html[data-theme="dark"] .avatar-details > span {
+  color: #b7c2ce;
+}
+
+html[data-theme="dark"] .avatar-details small {
+  color: #8996a4;
+}
+
+html[data-theme="dark"] .account-row span {
+  color: #9ca9b6;
+}
+
+html[data-theme="dark"] .account-row strong {
+  color: #e1e8ee;
+}
+
+html[data-theme="dark"] .setting-row strong {
+  color: #e6edf3;
+}
+
+html[data-theme="dark"] .setting-row span {
+  color: #aeb9c5;
+}
+
+html[data-theme="dark"] .theme-option strong {
+  color: #e6edf3;
+}
+
+html[data-theme="dark"] .theme-option span {
+  color: #aeb9c5;
+}
+
+html[data-theme="dark"] .system-row strong {
+  color: #e6edf3;
+}
+
+html[data-theme="dark"] .system-row span {
+  color: #aeb9c5;
+}
+
+html[data-theme="dark"] .ledger-actions button {
+  color: #aeb9c5;
+}
+
+html[data-theme="dark"] .ledger-actions button:hover {
+  background: #26313d;
+  color: #8bbcff;
+}
+
+html[data-theme="dark"] .profile-cancel,
+html[data-theme="dark"] .settings-reset,
+html[data-theme="dark"] .cancel-button {
+  background: #1d2630;
+  border-color: #3a4653;
+  color: #d3dbe3;
+}
+
+html[data-theme="dark"] .profile-save,
+html[data-theme="dark"] .settings-save,
+html[data-theme="dark"] .save-medicine-button {
+  background: #1858a8;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .profile-save:hover,
+html[data-theme="dark"] .settings-save:hover,
+html[data-theme="dark"] .save-medicine-button:hover {
+  background: #246bbf;
+}
+
+html[data-theme="dark"] .ledger-table th {
+  background: #202a34;
+  border-color: #35414d;
+}
+
+html[data-theme="dark"] .ledger-footer {
+  background: #1b242d;
+  color: #9daab7;
+}
+
+html[data-theme="dark"] .ledger-toolbar {
+  background: #1b242d;
+}
+
+html[data-theme="dark"] .medicine-icon,
+html[data-theme="dark"] .account-icon,
+html[data-theme="dark"] .settings-icon {
+  background: #26364a;
+  color: #91b9ed;
+}
+
+html[data-theme="dark"] .system-status-icon {
+  background: #1d3a2a;
+  color: #76d49a;
+}
+
+html[data-theme="dark"] .settings-saved,
+html[data-theme="dark"] .profile-saved-message {
+  background: #173523;
+  border-color: #2d6845;
+  color: #83d8a1;
+}
+
+html[data-theme="dark"] .sidebar-item.active {
+  background: #315f8c;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .sidebar-item.active span,
+html[data-theme="dark"] .sidebar-item.active svg {
+  color: #ffffff;
+}
