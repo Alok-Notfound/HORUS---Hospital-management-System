@@ -1,0 +1,8 @@
+{
+  "name": "horus-inner-fallback",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "cd .. && npx vite build --outDir dist && cp -r dist ../dist 2>/dev/null || true"
+  }
+}
