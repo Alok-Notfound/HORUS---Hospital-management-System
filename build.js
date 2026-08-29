@@ -1,18 +1,24 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
+console.log('--> Starting Vercel universal build process...');
+
+// Check if running from root
 if (fs.existsSync('frontend')) {
-  console.log('--> Detected project root. Building frontend...');
-  execSync('npm --prefix frontend install && npm --prefix frontend run build', { stdio: 'inherit' });
+  console.log('--> Installing frontend dependencies...');
+  execSync('npm --prefix frontend install', { stdio: 'inherit' });
 
-  // Copy frontend/dist to root/dist for Vercel
+  console.log('--> Compiling Vite frontend...');
+  execSync('npm --prefix frontend run build', { stdio: 'inherit' });
+
   if (fs.existsSync('frontend/dist')) {
-    console.log('--> Mirroring frontend/dist to ./dist for Vercel...');
+    console.log('--> Syncing build artifacts to ./dist...');
     fs.cpSync('frontend/dist', 'dist', { recursive: true });
   }
 } else {
-  console.log('--> Building inside frontend directory...');
+  console.log('--> Compiling inside frontend folder...');
   execSync('npm run build', { stdio: 'inherit' });
 }
 
-console.log('--> Build finished successfully!');
+console.log('--> Vercel build completed successfully!');
